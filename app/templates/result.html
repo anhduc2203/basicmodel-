@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kết quả trả về</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    
+    <h5 style="font-size:30;text-align: center;"><b>Kết quả</b></h5>
+    <div class="results">
+        {% for s in predicts %}
+            <p><b>Văn bản:</b></p>
+            <p>{{s}}</p><br>
+            <p>-------------------------</p><br>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

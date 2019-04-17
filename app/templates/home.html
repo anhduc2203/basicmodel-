@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Similarity API</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="brandname">
+                Text Similarity API
+            </div>
+        </div>
+    </header>
+
+    <div class="ml-container">
+        <form action="{{url_for('predict')}}" method="POST">
+            <p>Nhập văn bản</p>
+            <textarea name="comment" rows="4" cols="50"></textarea>
+            <br/>
+            <input type="submit" class="btn-info" value="predict">
+        </form>
+    </div>
+
+</body>
+</html>
